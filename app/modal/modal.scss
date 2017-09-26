@@ -1,0 +1,36 @@
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  .modal {
+    background-color: #fff;
+    border-radius: 3px;
+    min-width: 200px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:baseline;
+    padding: 10px;
+    .header {
+      font-size: 18px;
+      font-weight: bold;
+      align-self: center;
+    }
+    .msg {
+      margin-top: 20px;
+      align-self: center;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      align-self: center;
+    }
+  }
+}

@@ -40,6 +40,7 @@ const App = () => {
     food.draw(...boardPosition);
     timerId = setTimeout(run, interval);
   }
+
   const start = () => {
     playBtnEl.innerHTML = 'Play Again';
     score = 0;
@@ -57,6 +58,8 @@ const App = () => {
       btnLabel: CONSTANTS.playAgainLabel}
     ).then(start);
   }
+
+
 
   board.draw(BOARD_COLOR);
   snake.draw();
