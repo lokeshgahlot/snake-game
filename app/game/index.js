@@ -13,7 +13,6 @@ const FRAMES_PER_SECOND = 15;
 
 export default () => {
   const boardEl = document.querySelector('.board');
-  const playBtnEl = document.querySelector('.btn');
   const scoreEl = document.querySelector('.score');
   const ctx = boardEl.getContext("2d");
   const board = setupBoard(boardEl, ctx, SCALE);
@@ -29,6 +28,7 @@ export default () => {
     board.draw(BOARD_COLOR);
     snake.move().draw();
     const {x, y} = snake.getHead();
+    //
     if (x < 0 || x >= totalRow || y < 0 || y >= totalColumn || snake.checkBobyCollision()) {
       clearTimeout(timerId);
       stop();
@@ -37,15 +37,15 @@ export default () => {
     if (snake.eat(...boardPosition)) {
       boardPosition = getRandomPos(totalRow, totalColumn);
       score += 5;
-      scoreEl.innerHTML = 'Score: ' + score;
+      scoreEl.innerHTML = CONSTANTS.scoreLabel + ' ' + score;
     }
     food.draw(...boardPosition);
     timerId = setTimeout(run, interval);
   }
 
   const start = () => {
-    playBtnEl.innerHTML = 'pause';
     score = 0;
+    scoreEl.innerHTML = CONSTANTS.scoreLabel + ' ' + score;
     snake.reset();
     controls.add(snake);
     boardPosition = getRandomPos(totalRow, totalColumn);
@@ -64,7 +64,6 @@ export default () => {
 
   board.draw(BOARD_COLOR);
   snake.draw();
-  playBtnEl.addEventListener('click', start);
   boardEl.focus();
   start();
 }

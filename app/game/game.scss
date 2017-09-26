@@ -27,15 +27,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  .btn {
-    align-self: flex-start;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-  }
   .score {
     position: absolute;
-    left: 10px;
-    top: 5px;
+    top: 10px;
   }
 }
