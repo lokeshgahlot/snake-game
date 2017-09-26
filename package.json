@@ -1,7 +1,7 @@
 {
-  "name": "React-Boilerplate",
+  "name": "Snake-Game",
   "version": "1.0.0",
-  "description": "React Boilerplate",
+  "description": "Snake Game",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors",

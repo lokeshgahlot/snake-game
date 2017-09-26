@@ -4,7 +4,7 @@ import Food  from '../food';
 import setupBoard from '../board/setupBoard';
 import Controls from '../snake/controls';
 import CONSTANTS from '../constants';
-import showModal  from '../modal';
+import showModal  from '../utils/modal';
 import {drawCell, getClientWidth, getClientHeight, getRandomPos} from '../utils';
 
 const BOARD_COLOR = 'papayawhip';

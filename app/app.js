@@ -1,7 +1,7 @@
 import './app.scss';
 import CONSTANTS from './constants';
 import game from './game';
-import showModal  from './modal';
+import showModal  from './utils/modal';
 
 const App = () => {
 
