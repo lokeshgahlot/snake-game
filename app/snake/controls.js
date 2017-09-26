@@ -7,7 +7,7 @@ export default () => {
 
   const remove = (state) => () => {
     if(state.fn) {
-        document.addEventListener('keydown', state.fn);
+        document.removeEventListener('keydown', state.fn);
     }
   }
 
