@@ -1,5 +1,6 @@
 import './modal.scss';
 
+
 export default ({header, msg, btnLabel}) => {
   const modal = document.querySelector('#template-modal').cloneNode(true);
   const headerEl = modal.querySelector('.header');

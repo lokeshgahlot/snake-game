@@ -4,7 +4,7 @@ import game from './game';
 import showModal  from './utils/modal';
 
 const App = () => {
-
+  // welcome message
   showModal({
     header: CONSTANTS.headerMsg,
     msg: CONSTANTS.welcomeMsg,

@@ -8,7 +8,7 @@ import showModal  from '../utils/modal';
 import {drawCell, getClientWidth, getClientHeight, getRandomPos} from '../utils';
 
 const BOARD_COLOR = 'papayawhip';
-const SNAKE_COLOR = 'blue';
+const SNAKE_COLOR = 'seagreen';
 const FOOD_COLOR = 'tomato';
 const SCALE = 20;
 const FRAMES_PER_SECOND = 15; // It can be use as speed also.
