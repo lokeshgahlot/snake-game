@@ -1,0 +1,41 @@
+.hidden {
+  display: none;
+}
+
+.btn {
+  font: 14px 'Helvetica', sans-serif;
+  padding: 7px;
+  background: seagreen;
+  border: 0;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.score {
+  color: #fff;
+}
+
+.app {
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .btn {
+    align-self: flex-start;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .score {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+}
