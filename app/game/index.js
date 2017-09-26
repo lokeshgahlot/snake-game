@@ -13,6 +13,7 @@ const FOOD_COLOR = 'tomato';
 const SCALE = 20;
 const FRAMES_PER_SECOND = 15; // It can be use as speed also.
 
+// game method
 export default () => {
   const boardEl = document.querySelector('.board');
   const scoreEl = document.querySelector('.score');
@@ -70,8 +71,8 @@ export default () => {
     ).then(start);
   }
 
-  board.draw(BOARD_COLOR);
-  snake.draw();
+  board.draw(BOARD_COLOR); // draw board for first time
+  snake.draw(); // draw snake for first time
   boardEl.focus();
   start();
 }
