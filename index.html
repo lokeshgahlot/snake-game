@@ -9,8 +9,18 @@
 <body>
   <div class="app">
     <span class='score'>Score: 0</span>
-    <button class='btn'>Play</button>
+    <button class='btn'>Pause</button>
     <canvas class='board' width = '100px', height= '100px'></canvas>
+  </div>
+
+  <div class='hidden'>
+    <div class='modal-container' id='template-modal'>
+      <div class='modal'>
+        <header class="header"></header>
+        <p class='msg'></p>
+        <button class='btn'></button>
+      </div>
+    </div>
   </div>
 
   <script src="bundle.js"></script>

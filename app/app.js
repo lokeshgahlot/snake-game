@@ -2,6 +2,8 @@ import './app.scss';
 import Snake from './snake';
 import Board from './board';
 import Food  from './food';
+import CONSTANTS from './constants';
+import showModal  from './modal';
 import {drawCell, getClientWidth, getClientHeight, getRandomPos} from './utils';
 
 const BOARD_COLOR = 'papayawhip';
@@ -10,7 +12,7 @@ const FRAMES_PER_SECOND = 15;
 
 const App = () => {
   const boardEl = document.querySelector('.board');
-  const playBtn = document.querySelector('.btn');
+  const playBtnEl = document.querySelector('.btn');
   const scoreEl = document.querySelector('.score');
   const ctx = boardEl.getContext("2d");
   const board = setupBoard(boardEl, ctx);
@@ -27,6 +29,7 @@ const App = () => {
     const {x, y} = snake.getHead();
     if (x < 0 || x >= totalRow || y < 0 || y >= totalColumn || snake.checkBobyCollision()) {
       clearTimeout(timerId);
+      stop();
       return;
     }
     if (snake.eat(...boardPosition)) {
@@ -35,11 +38,10 @@ const App = () => {
       scoreEl.innerHTML = 'Score: ' + score;
     }
     food.draw(...boardPosition);
-
     timerId = setTimeout(run, interval);
   }
   const start = () => {
-    playBtn.innerHTML = 'Play Again';
+    playBtnEl.innerHTML = 'Play Again';
     score = 0;
     snake.reset();
     clearTimeout(timerId);
@@ -48,10 +50,23 @@ const App = () => {
     run();
   }
 
+  const stop = () => {
+    showModal({
+      header: CONSTANTS.headerMsg,
+      msg: CONSTANTS.gameOverMsg,
+      btnLabel: CONSTANTS.playAgainLabel}
+    ).then(start);
+  }
+
   board.draw(BOARD_COLOR);
   snake.draw();
-  playBtn.addEventListener('click', start);
+  playBtnEl.addEventListener('click', start);
   boardEl.focus();
+  showModal({
+    header: CONSTANTS.headerMsg,
+    msg: CONSTANTS.welcomeMsg,
+    btnLabel: CONSTANTS.playLabel}
+  ).then(start);
 }
 
 const setupBoard = (boardEl, ctx) => {
