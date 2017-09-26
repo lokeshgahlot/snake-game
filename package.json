@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors",
-    "build": "cross-env NODE_ENV=production webpack",
-    "prebuild": "flow",
-    "flow": "flow",
-    "setup": "npm install -g yarn && yarn install && flow-typed install",
-    "update-flow-typed": "flow-typed install"
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "author": "Lokesh Gahlot",
   "dependencies": {
@@ -27,11 +23,6 @@
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "2.1.2",
-    "flow": "^0.2.3",
-    "flow-bin": "0.45.0",
-    "flow-typed": "^2.1.2",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "script-loader": "^0.7.0",
