@@ -1,6 +1,13 @@
 import './modal.scss';
 
 
+/*
+ * Returns the Media Widget configuration for Live Events.
+ * @params Object {header: string, msg, btnLabel}
+
+ * @return: promise
+ */
+
 export default ({header, msg, btnLabel}) => {
   const modal = document.querySelector('#template-modal').cloneNode(true);
   const headerEl = modal.querySelector('.header');

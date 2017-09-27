@@ -1,10 +1,42 @@
-# react-boilerplate
-React boilerplate project with flow, webpack and gzip
+# Snake Game
+
+## Setup
+
+Got into `snake-game` folder
+
+- use npm
+
+```sh
+npm install
+```
+
+- use yarn
+
+```sh
+yarn install
+```
+
+## Build
+
+- Dev environment
+
+```sh
+npm run dev
+```
+
+- Production environment
+
+```sh
+npm run build
+```
+## Notes
+- Please use latest chrome version.
+- For dev environment, please use `http://localhost:8080/` url in browser.
+- Build files location `snake-game/public`
 
 
-## Steps to setup project
-- Clone this repro `git clone git@github.com:lokeshgahlot/react-boilerplate.git`
-- Run `npm run setup` command, it installs yarn, flow and other project dependencies.
-- Use `yarn dev` command to run the project in development environment.
-- Use `yarn build` command to run the project in production environment.
-- Build creates bundle.js and bundle.gz.js int the public folder
+## Next Steps
+- More walls can be added like a maze.
+- More levels can be added in the game and every level would increase speed of the snake.
+- For a change, More enemies can be added.
+- Food (like a mouse) can be moved around the board.
