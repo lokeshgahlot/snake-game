@@ -31,8 +31,9 @@ npm run build
 ```
 ## Notes
 - Please use latest chrome version.
-- For dev environment, please use `http://localhost:8080/` url in browser.
+- For dev environment, please use `http://localhost:8080/` url in the browser.
 - Build files location `snake-game/public`
+- I used composition instead of ES6 class for all components.
 
 
 ## Next Steps

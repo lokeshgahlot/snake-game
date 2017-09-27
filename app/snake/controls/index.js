@@ -44,8 +44,10 @@ export default () => {
     fn: null
   };
 
-  return {
+  const instance = Object.create({
     add: add(state),
     remove: remove(state)
-  }
+  });
+
+  return instance;
 }

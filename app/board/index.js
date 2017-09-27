@@ -1,3 +1,10 @@
+/*
+ * Returns the Media Widget configuration for Live Events.
+ * @params Object {header: string, msg, btnLabel}
+
+ * @return: promise
+ */
+
 export default (options) => {
   const constructor = ({boardEl, width, height}) => {
     boardEl.width = width;
