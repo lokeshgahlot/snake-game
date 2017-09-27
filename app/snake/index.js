@@ -1,3 +1,7 @@
+/*
+ * Snake composition
+ */
+
 export default ({scale, length, speed, drawCell}) => {
   const constructor = (state) => () => {
     for (let i = 0; i < state.length; i++) {
@@ -22,11 +26,12 @@ export default ({scale, length, speed, drawCell}) => {
     }
   }
 
-  const dir = (state) => (x , y) => {
+  const direction = (state) => (x , y) => {
     state.xSpeed = x;
     state.ySpeed = y;
   }
 
+  //
   const eat = (state) => (x, y) => {
     const head = state.body[state.body.length-1];
     if (head.x === x && head.y === y) {
@@ -48,6 +53,8 @@ export default ({scale, length, speed, drawCell}) => {
 
   const checkBobyCollision = (state) => () => {
     const body = state.body;
+    // check if head collide wtih body
+    // last element of the body array is the head
     const head = body[body.length-1];
     for (let i = 0; i < body.length-2; i++) {
       if (head.x === body[i].x && head.y === body[i].y) {
@@ -73,7 +80,7 @@ export default ({scale, length, speed, drawCell}) => {
   constructor(state)();
   state.instance = Object.create({
     move: move(state),
-    dir: dir(state),
+    direction: direction(state),
     eat: eat(state),
     draw: draw(state),
     reset: reset(state),

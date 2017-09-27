@@ -1,3 +1,7 @@
+/*
+ * controls composition
+ * Snake's arrow controls
+ */
 
 export default () => {
   const add = (state) => (snake) => {
@@ -15,25 +19,25 @@ export default () => {
     switch(e.key) {
       case 'ArrowUp':
         if(dir !== 'down') {
-          snake.dir(0, -1);
+          snake.direction(0, -1);
           dir = 'up';
         }
        break;
       case 'ArrowDown':
         if(dir !== 'up') {
-          snake.dir(0, 1);
+          snake.direction(0, 1);
           dir = 'down';
         }
       break;
       case 'ArrowLeft':
         if(dir !== 'right') {
-          snake.dir(-1, 0);
+          snake.direction(-1, 0);
           dir = 'left';
         }
       break;
       case 'ArrowRight':
         if(dir !== 'left') {
-          snake.dir(1, 0);
+          snake.direction(1, 0);
           dir = 'right';
         }
       break;
